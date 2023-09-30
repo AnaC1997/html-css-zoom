@@ -5,38 +5,50 @@
 }
 body{
     background-color: black;
+  
 }
-
 .header{
     background-color: black;
-    width: 100vw;
-    height: 10vh;
-    z-index: 999;
+    width: 100%;
+    height: 70px;
+    z-index: 999;  
+    
+}
+
+main {
+    height: calc(100vh - 140px);
+    overflow: auto;  
+   
+    
 }
 
 .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
-    gap: 9px;  
-
+    align-content: center; 
+    height: 100%;
+    width: 100%;
+    
 }
 .video-participant {
-    max-width:( 12% -16px);
-    position: relative; 
+    width: calc(100% / 7);    
+    position: relative;
    
 }
 
-.video-participant img{
+
+img{
     width: 100%;
-    height: auto;
-    
+    padding-left: 10px;
+    top: 0;
+   
    
 }
-span{
+
+.icone {
     position:absolute;
-    right: 5px;
+    left: 5px;
     bottom: 5px;
     color: white;
     background-color: rgba(150, 145, 145, 0.5);
@@ -44,26 +56,42 @@ span{
      
 
 }
-span{
-    position: relative;
-}
+
+
 
 /*Footer*/
+
 .containerFooter{
+    height: 70px;
     width: 100%;
-    height: 100px;
-    background-color: rgb(199, 14, 14);
-    display: flex;    
-   
-}
-
-.icone-right{
+    background-color: rgb(142, 141, 141);
+    position: fixed; 
     display: flex;
-    text-align: center;
+    justify-content: space-around;  /*Distribuisce lo spazio tra .icone-left e .icone-right */
+    align-items: center; /* Allinea verticalmente al centro gli elementi all'interno */
+    padding: 20px; /* Aggiunge spazio intorno */
+    color: white;
+
 }
 
-.fas{
-    display: block;
+
+.icone-left, .icone-right {
+    display: flex; 
 }
 
+ul {
+    list-style-type: none;
+    margin: 0 10px;  /* Aggiunge margini tra le liste */
+    padding: 0; /* Rimuove il padding predefinito */
+} 
 
+li {
+    display: flex;
+    flex-direction: column; /* Imposta la disposizione verticale */
+    align-items: center; /* Centra orizzontalmente gli elementi all'interno */
+    margin-right: 10px; /* Aggiunge spazio a destra di ogni elemento della lista */
+}
+
+i {
+    margin-bottom: 5px;  /* Aggiunge spazio tra l'icona e il testo */
+}
